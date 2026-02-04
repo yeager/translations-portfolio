@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Nylander – Svenska Översättningar</title>
+    <meta name="description" content="Portfolio över svenska översättningar av öppen källkod – emulatorer, GNU, Ubuntu, spel och mer.">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --yellow: #d29922;
+            --purple: #a371f7;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #1a1f35 0%, #0d1117 100%);
+            border-bottom: 1px solid var(--border);
+        }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { color: var(--text-muted); font-size: 1.2rem; }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .stat { text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: bold; color: var(--accent); }
+        .stat-label { color: var(--text-muted); font-size: 0.9rem; }
+        .highlight { background: linear-gradient(90deg, var(--accent), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav {
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            padding: 1rem;
+            gap: 0.5rem;
+        }
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        nav a:hover { background: var(--border); color: var(--text); }
+        section { padding: 3rem 0; }
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: all 0.2s;
+        }
+        .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem; }
+        .card-meta { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--text-muted); flex-wrap: wrap; }
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .badge-100 { background: var(--green); color: #000; }
+        .badge-partial { background: var(--yellow); color: #000; }
+        .badge-contrib { background: var(--purple); color: #fff; }
+        .links { margin-top: 0.75rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .links a:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .stats { gap: 1.5rem; }
+            .stat-number { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🇸🇪 Daniel Nylander</h1>
+        <p>Svenska översättningar av öppen källkod sedan 2004</p>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Projekt översatta</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">40+</div>
+                <div class="stat-label">Emulatorer</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Ubuntu på svenska</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">År som översättare</div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#emulatorer">🎮 Emulatorer</a></li>
+            <li><a href="#retrogaming">🕹️ Retrogaming</a></li>
+            <li><a href="#gnu">🐃 GNU/TP</a></li>
+            <li><a href="#linux">🐧 Linux/Desktop</a></li>
+            <li><a href="#apps">📱 Applikationer</a></li>
+            <li><a href="#spel">🎯 Spel</a></li>
+            <li><a href="#verktyg">🔧 Mina verktyg</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <section id="emulatorer">
+            <h2>🎮 Emulatorer</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>RetroArch</h3>
+                    <p>Multi-system emulator frontend med libretro</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/libretro/RetroArch">GitHub</a> <a href="https://www.danielnylander.se/2025/04/06/oversattning-av-retroarch/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>RPCS3</h3>
+                    <p>PlayStation 3 emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/rpcs3">GitHub</a> <a href="https://www.danielnylander.se/2025/01/12/oversattning-av-rpcs3/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>DuckStation</h3>
+                    <p>PlayStation 1 emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/duckstation">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>PCSX2</h3>
+                    <p>PlayStation 2 emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/pcsx2">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>PCSX-Redux</h3>
+                    <p>PlayStation 1 emulator (utvecklarfokus)</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/pcsx-redux">GitHub</a> <a href="https://www.danielnylander.se/2026/01/04/oversattning-av-pcsx-redux/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Vita3K</h3>
+                    <p>PlayStation Vita emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/Vita3K">GitHub</a> <a href="https://www.danielnylander.se/2025/02/04/oversattning-av-vita3k/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>shadPS4</h3>
+                    <p>PlayStation 4 emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/shadPS4">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Citra / Mandarine</h3>
+                    <p>Nintendo 3DS emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/citra">GitHub</a> <a href="https://www.danielnylander.se/2024/12/14/oversattning-av-citra-och-mandarine/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Azahar</h3>
+                    <p>Nintendo 3DS emulator (Citra-fork)</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/azahar">GitHub</a> <a href="https://www.danielnylander.se/2025/03/06/oversattning-av-azahar/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Citron</h3>
+                    <p>Nintendo Switch emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/02/22/oversattning-av-citron/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Panda3DS</h3>
+                    <p>Nintendo 3DS emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/Panda3DS">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>mGBA</h3>
+                    <p>Game Boy Advance emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/mgba">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>SNES9x</h3>
+                    <p>Super Nintendo emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/snes9x">GitHub</a> <a href="https://www.danielnylander.se/2025/02/08/oversattning-av-snes9x/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Project64</h3>
+                    <p>Nintendo 64 emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/project64">GitHub</a> <a href="https://www.danielnylander.se/2025/01/25/uppdaterade-oversattningen-av-project64/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>RMG (Rosalie's Mupen GUI)</h3>
+                    <p>Nintendo 64 emulator frontend</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/RMG">GitHub</a> <a href="https://www.danielnylander.se/2025/02/09/oversattning-av-rosalies-mupen-gui/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>GLideN64</h3>
+                    <p>N64 grafikplugin</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/GLideN64">GitHub</a> <a href="https://www.danielnylander.se/2025/02/10/oversattning-av-gliden64/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Cemu</h3>
+                    <p>Wii U emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/Cemu-Language">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>xemu</h3>
+                    <p>Original Xbox emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/xemu">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>BigPEmu</h3>
+                    <p>Atari Jaguar emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2024/11/10/oversattning-av-bigpemu/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Flycast</h3>
+                    <p>Sega Dreamcast emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/12/08/oversattning-av-flycast/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>WinUAE / FS-UAE</h3>
+                    <p>Amiga emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/06/13/oversattning-av-winuae/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Denise</h3>
+                    <p>Amiga emulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/11/17/oversattning-av-denise/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>ScummVM</h3>
+                    <p>Äventyrs-/spelmotor</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/scummvm">GitHub</a> <a href="https://www.danielnylander.se/2025/03/13/oversattning-av-scummvm/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>OpenBVE</h3>
+                    <p>Tågsimulator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/OpenBVE">GitHub</a> <a href="https://www.danielnylander.se/2026/01/07/oversattning-av-openbve/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>MAME</h3>
+                    <p>Arkadspel-emulator</p>
+                    <div class="card-meta"><span class="badge badge-contrib">Bidrag</span></div>
+                    <div class="links"><a href="https://github.com/yeager/mame">GitHub</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="retrogaming">
+            <h2>🕹️ Retrogaming-plattformar</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Batocera Linux</h3>
+                    <p>Retrogaming-distro</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/batocera-emulationstation">GitHub</a> <a href="https://www.danielnylander.se/2025/04/02/oversattning-av-batocera-linux/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Recalbox</h3>
+                    <p>Retrogaming-distro</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/02/24/oversattning-av-recalbox/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>EmuDeck</h3>
+                    <p>Steam Deck emulator-installer</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/emudeck-electron">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Pegasus Frontend</h3>
+                    <p>Spel-frontend</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/pegasus-frontend">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>EmulationStation</h3>
+                    <p>Retrogaming frontend</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/EmulationStation-fcamod">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>RetroAchievements</h3>
+                    <p>Achievements för retro-spel</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/07/05/oversattning-av-retroachievements/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Hakchi2 CE</h3>
+                    <p>NES/SNES Classic mod-verktyg</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/Hakchi2-CE">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Arcade Manager</h3>
+                    <p>Arkadspel-hanterare</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/03/01/oversattning-av-arcade-manager/">Blogg</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gnu">
+            <h2>🐃 GNU / Translation Project</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Medlem i svenska översättningsteamet sedan 2004. 88% täckning – högst av alla språk!</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>GNU coreutils</h3>
+                    <p>Grundläggande UNIX-kommandon</p>
+                    <div class="card-meta"><span class="badge badge-partial">76%</span></div>
+                </div>
+                <div class="card">
+                    <h3>GNU bash</h3>
+                    <p>Bourne Again Shell</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>GNU binutils</h3>
+                    <p>Binärverktyg (ld, as, gold)</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2026/01/24/uppdatering-av-gnu-gold-gas-och-ld/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>GNU grep, sed, awk</h3>
+                    <p>Textbearbetningsverktyg</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>GNU gettext</h3>
+                    <p>Internationaliseringsbibliotek</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>util-linux man-sidor</h3>
+                    <p>Linux-verktygsdokumentation</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2026/01/13/oversattning-av-util-linux-man/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Vim / Vi</h3>
+                    <p>Textredigerare + tutor</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/vim">GitHub</a> <a href="https://www.danielnylander.se/2025/12/03/uppdaterad-oversattning-av-vim-vi-improved/">Blogg</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="linux">
+            <h2>🐧 Linux & Desktop</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Ubuntu</h3>
+                    <p>Första språket att nå 100%!</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2026/01/28/svenska-ubuntu-oversattningar-100/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Debian Reference</h3>
+                    <p>Debians referensmanual</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2026/01/02/oversattning-av-debian-reference/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>elementary OS</h3>
+                    <p>Linux-distro</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/10/21/oversattning-och-granskning-av-elementary-os/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>MATE Desktop</h3>
+                    <p>Skrivbordsmiljö</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/10/07/oversattning-av-skrivbordsmiljon-mate/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>CachyOS</h3>
+                    <p>Arch-baserad distro</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/CachyOS-Welcome">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>OpenIndiana</h3>
+                    <p>illumos-distro</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/openindiana-welcome">GitHub</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="apps">
+            <h2>📱 Applikationer</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>VLC Media Player</h3>
+                    <p>Mediaspelare</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/01/26/uppdaterad-oversattning-av-vlc/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Kodi</h3>
+                    <p>Mediacenter</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/Kodi-Official">GitHub</a> <a href="https://www.danielnylander.se/2025/04/06/uppdaterad-oversattning-av-kodi/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Inkscape</h3>
+                    <p>Vektorgrafik</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/05/12/stor-uppdatering-av-inkscape/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Blender</h3>
+                    <p>3D-grafik</p>
+                    <div class="card-meta"><span class="badge badge-contrib">Bidrag</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/05/16/bidrar-till-oversattningen-av-blender/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>FreeCAD</h3>
+                    <p>CAD-program</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/FreeCAD">GitHub</a> <a href="https://www.danielnylander.se/2025/09/06/uppdatering-av-freecad/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>LibreCAD</h3>
+                    <p>2D CAD</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/06/14/oversattning-av-librecad-2/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>OpenSCAD</h3>
+                    <p>Programmerbar CAD</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/openscad">GitHub</a> <a href="https://www.danielnylander.se/2025/06/16/oversattning-av-openscad/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Scribus</h3>
+                    <p>Desktop publishing</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/07/27/uppdatering-for-scribus/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Ardour</h3>
+                    <p>Digital Audio Workstation</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/ardour">GitHub</a> <a href="https://www.danielnylander.se/2026/01/16/oversattning-av-ardour/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Shotcut</h3>
+                    <p>Videoredigerare</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/shotcut">GitHub</a> <a href="https://www.danielnylander.se/2025/07/06/oversattning-av-shotcut/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>MKVToolNix</h3>
+                    <p>MKV-verktyg</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/09/03/oversattning-av-mkvtoolnix/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Remmina</h3>
+                    <p>Fjärrskrivbordsklient</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/12/31/oversattning-av-remmina/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Bitwarden</h3>
+                    <p>Lösenordshanterare</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/07/09/oversattning-av-bitwarden/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>qBittorrent</h3>
+                    <p>BitTorrent-klient</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/qBittorrent">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Stellarium</h3>
+                    <p>Planetarium</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/02/01/uppdatering-av-stellarium/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Home Assistant</h3>
+                    <p>Smart hem-plattform</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/12/07/oversattning-av-home-assistant/">Blogg</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="spel">
+            <h2>🎯 Spel</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>OpenXcom</h3>
+                    <p>X-COM: UFO Defense remake</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/11/03/oversattning-av-openxcom/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>0 A.D.</h3>
+                    <p>Historiskt strategispel</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/12/30/uppdatering-av-0-a-d/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Widelands</h3>
+                    <p>Settlers-liknande</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/12/27/uppdatering-av-widelands/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>SuperTux</h3>
+                    <p>Plattformsspel</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/04/26/liten-uppdatering-av-spelet-supertux/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Tux Paint</h3>
+                    <p>Ritprogram för barn</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/04/19/uppdaterad-oversattning-av-rita-med-tux-tux-paint/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Shattered Pixel Dungeon</h3>
+                    <p>Roguelike</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/07/16/oversattning-av-shattered-pixel-dungeon/">Blogg</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="verktyg">
+            <h2>🔧 Mina verktyg</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Verktyg jag byggt för att underlätta översättningsarbetet.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>l10n-lint</h3>
+                    <p>Linter för översättningsfiler (.po, .ts)</p>
+                    <div class="card-meta"><span class="badge badge-100">45 språk</span></div>
+                    <div class="links"><a href="https://github.com/yeager/l10n-lint">GitHub</a> <a href="https://www.danielnylander.se/2026/02/03/l10n-lint-ny-linter-for-oversattningsfiler/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>tp-lint</h3>
+                    <p>Granska Translation Project-översättningar</p>
+                    <div class="card-meta"><span class="badge badge-100">37 språk</span></div>
+                    <div class="links"><a href="https://github.com/yeager/tp-lint">GitHub</a> <a href="https://www.danielnylander.se/2026/02/03/tp-lint-granska-translation-project-oversattningar-automatiskt/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>po-translate</h3>
+                    <p>Batch-översätt med AI eller gratis tjänster</p>
+                    <div class="card-meta"><span class="badge badge-100">37 språk</span></div>
+                    <div class="links"><a href="https://github.com/yeager/po-translate">GitHub</a> <a href="https://www.danielnylander.se/2026/02/03/po-translate-batch-oversatt-po-filer-med-ai-eller-gratis-tjanster/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Kodi Subtitle Translator</h3>
+                    <p>Översätt undertexter i Kodi automatiskt</p>
+                    <div class="card-meta"><span class="badge badge-100">25 språk</span></div>
+                    <div class="links"><a href="https://github.com/yeager/kodi-subtitle-translator">GitHub</a> <a href="https://www.danielnylander.se/2026/01/31/automatisk-oversattning-av-undertexter-i-kodi/">Blogg</a></div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>
+            <strong>Daniel Nylander</strong><br>
+            <a href="https://www.danielnylander.se">danielnylander.se</a> · 
+            <a href="https://github.com/yeager">GitHub</a> · 
+            <a href="https://translationproject.org/team/sv.html">Translation Project</a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+            Medlem i svenska översättningsteamet på Translation Project sedan 2004.<br>
+            Alla översättningar är öppen källkod och fria att använda.
+        </p>
+    </footer>
+</body>
+</html>
