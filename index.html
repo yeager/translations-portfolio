@@ -24,7 +24,7 @@
             color: var(--text);
             line-height: 1.6;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
         header {
             text-align: center;
             padding: 4rem 2rem;
@@ -43,7 +43,6 @@
         .stat { text-align: center; }
         .stat-number { font-size: 2.5rem; font-weight: bold; color: var(--accent); }
         .stat-label { color: var(--text-muted); font-size: 0.9rem; }
-        .highlight { background: linear-gradient(90deg, var(--accent), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         nav {
             background: var(--card);
             border-bottom: 1px solid var(--border);
@@ -56,58 +55,56 @@
             justify-content: center;
             list-style: none;
             flex-wrap: wrap;
-            padding: 1rem;
-            gap: 0.5rem;
+            padding: 0.75rem;
+            gap: 0.25rem;
         }
         nav a {
             color: var(--text-muted);
             text-decoration: none;
-            padding: 0.5rem 1rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 6px;
             transition: all 0.2s;
+            font-size: 0.9rem;
         }
         nav a:hover { background: var(--border); color: var(--text); }
-        section { padding: 3rem 0; }
+        section { padding: 2.5rem 0; }
         section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--border);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 0.75rem;
         }
         .card {
             background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.25rem;
+            border-radius: 6px;
+            padding: 1rem;
             transition: all 0.2s;
         }
-        .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-        .card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-        .card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem; }
-        .card-meta { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--text-muted); flex-wrap: wrap; }
+        .card:hover { border-color: var(--accent); }
+        .card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .card p { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.5rem; }
+        .card-meta { display: flex; gap: 0.5rem; font-size: 0.75rem; flex-wrap: wrap; }
         .badge {
             display: inline-block;
-            padding: 0.2rem 0.6rem;
+            padding: 0.15rem 0.5rem;
             border-radius: 20px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 500;
         }
         .badge-100 { background: var(--green); color: #000; }
         .badge-partial { background: var(--yellow); color: #000; }
         .badge-contrib { background: var(--purple); color: #fff; }
-        .links { margin-top: 0.75rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+        .links { margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
         .links a {
             color: var(--accent);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
         .links a:hover { text-decoration: underline; }
         footer {
@@ -117,10 +114,12 @@
             color: var(--text-muted);
         }
         footer a { color: var(--accent); text-decoration: none; }
+        .section-intro { color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             header h1 { font-size: 1.8rem; }
             .stats { gap: 1.5rem; }
             .stat-number { font-size: 2rem; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -131,19 +130,19 @@
         <div class="stats">
             <div class="stat">
                 <div class="stat-number">400+</div>
-                <div class="stat-label">Projekt översatta</div>
+                <div class="stat-label">Projekt</div>
             </div>
             <div class="stat">
-                <div class="stat-number">40+</div>
+                <div class="stat-number">50+</div>
                 <div class="stat-label">Emulatorer</div>
             </div>
             <div class="stat">
                 <div class="stat-number">100%</div>
-                <div class="stat-label">Ubuntu på svenska</div>
+                <div class="stat-label">Ubuntu</div>
             </div>
             <div class="stat">
                 <div class="stat-number">20+</div>
-                <div class="stat-label">År som översättare</div>
+                <div class="stat-label">År</div>
             </div>
         </div>
     </header>
@@ -152,206 +151,228 @@
         <ul>
             <li><a href="#emulatorer">🎮 Emulatorer</a></li>
             <li><a href="#retrogaming">🕹️ Retrogaming</a></li>
+            <li><a href="#kodi">📺 Kodi</a></li>
             <li><a href="#gnu">🐃 GNU/TP</a></li>
-            <li><a href="#linux">🐧 Linux/Desktop</a></li>
-            <li><a href="#apps">📱 Applikationer</a></li>
+            <li><a href="#linux">🐧 Linux</a></li>
+            <li><a href="#apps">📱 Apps</a></li>
+            <li><a href="#grafik">🎨 Grafik</a></li>
+            <li><a href="#ljud">🎵 Ljud/Video</a></li>
             <li><a href="#spel">🎯 Spel</a></li>
-            <li><a href="#verktyg">🔧 Mina verktyg</a></li>
-            <li><a href="#geo">🗺️ GIS/Geo</a></li>
+            <li><a href="#geo">🗺️ GIS</a></li>
             <li><a href="#server">🖥️ Server</a></li>
-            <li><a href="#docs">📚 Dokumentation</a></li>
+            <li><a href="#docs">📚 Docs</a></li>
+            <li><a href="#verktyg">🔧 Verktyg</a></li>
             <li><a href="#historic">📜 Historik</a></li>
         </ul>
     </nav>
 
     <div class="container">
 
+        <!-- EMULATORER -->
         <section id="emulatorer">
             <h2>🎮 Emulatorer</h2>
             <div class="grid">
-                <div class="card">
-                    <h3>RetroArch</h3>
-                    <p>Multi-system emulator frontend med libretro</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/libretro/RetroArch">GitHub</a> <a href="https://www.danielnylander.se/2025/04/06/oversattning-av-retroarch/">Blogg</a></div>
-                </div>
+                <!-- PlayStation -->
                 <div class="card">
                     <h3>RPCS3</h3>
-                    <p>PlayStation 3 emulator</p>
+                    <p>PlayStation 3</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://github.com/yeager/rpcs3">GitHub</a> <a href="https://www.danielnylander.se/2025/01/12/oversattning-av-rpcs3/">Blogg</a></div>
                 </div>
                 <div class="card">
-                    <h3>DuckStation</h3>
-                    <p>PlayStation 1 emulator</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/duckstation">GitHub</a></div>
-                </div>
-                <div class="card">
-                    <h3>PCSX2</h3>
-                    <p>PlayStation 2 emulator</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/pcsx2">GitHub</a></div>
-                </div>
-                <div class="card">
-                    <h3>PCSX-Redux</h3>
-                    <p>PlayStation 1 emulator (utvecklarfokus)</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/pcsx-redux">GitHub</a> <a href="https://www.danielnylander.se/2026/01/04/oversattning-av-pcsx-redux/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Vita3K</h3>
-                    <p>PlayStation Vita emulator</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/Vita3K">GitHub</a> <a href="https://www.danielnylander.se/2025/02/04/oversattning-av-vita3k/">Blogg</a></div>
-                </div>
-                <div class="card">
                     <h3>shadPS4</h3>
-                    <p>PlayStation 4 emulator</p>
+                    <p>PlayStation 4</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://github.com/yeager/shadPS4">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>Citra / Mandarine</h3>
-                    <p>Nintendo 3DS emulator</p>
+                    <h3>PCSX2</h3>
+                    <p>PlayStation 2</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/citra">GitHub</a> <a href="https://www.danielnylander.se/2024/12/14/oversattning-av-citra-och-mandarine/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/pcsx2">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>Azahar</h3>
-                    <p>Nintendo 3DS emulator (Citra-fork)</p>
+                    <h3>DuckStation</h3>
+                    <p>PlayStation 1</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/azahar">GitHub</a> <a href="https://www.danielnylander.se/2025/03/06/oversattning-av-azahar/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/duckstation">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>PCSX-Redux</h3>
+                    <p>PlayStation 1 (dev)</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2026/01/04/oversattning-av-pcsx-redux/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Vita3K</h3>
+                    <p>PlayStation Vita</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/Vita3K">GitHub</a></div>
+                </div>
+                <!-- Nintendo -->
+                <div class="card">
+                    <h3>Ryujinx</h3>
+                    <p>Nintendo Switch</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2024/10/06/oversattning-av-ryujinx/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>Citron</h3>
-                    <p>Nintendo Switch emulator</p>
+                    <p>Nintendo Switch</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://www.danielnylander.se/2025/02/22/oversattning-av-citron/">Blogg</a></div>
                 </div>
                 <div class="card">
+                    <h3>Cemu</h3>
+                    <p>Wii U</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/Cemu-Language">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Citra</h3>
+                    <p>Nintendo 3DS</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/citra">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Azahar</h3>
+                    <p>Nintendo 3DS (Citra-fork)</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/azahar">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Mandarine</h3>
+                    <p>Nintendo 3DS (Citra-fork)</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/mandarine">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Borked3DS</h3>
+                    <p>Nintendo 3DS (experimental)</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/Borked3DS">GitHub</a></div>
+                </div>
+                <div class="card">
                     <h3>Panda3DS</h3>
-                    <p>Nintendo 3DS emulator</p>
+                    <p>Nintendo 3DS (HLE)</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://github.com/yeager/Panda3DS">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>mGBA</h3>
-                    <p>Game Boy Advance emulator</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/mgba">GitHub</a></div>
-                </div>
-                <div class="card">
-                    <h3>SNES9x</h3>
-                    <p>Super Nintendo emulator</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/snes9x">GitHub</a> <a href="https://www.danielnylander.se/2025/02/08/oversattning-av-snes9x/">Blogg</a></div>
-                </div>
-                <div class="card">
                     <h3>Project64</h3>
-                    <p>Nintendo 64 emulator</p>
+                    <p>Nintendo 64</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/project64">GitHub</a> <a href="https://www.danielnylander.se/2025/01/25/uppdaterade-oversattningen-av-project64/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/project64">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>RMG (Rosalie's Mupen GUI)</h3>
-                    <p>Nintendo 64 emulator frontend</p>
+                    <p>Nintendo 64</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/RMG">GitHub</a> <a href="https://www.danielnylander.se/2025/02/09/oversattning-av-rosalies-mupen-gui/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/RMG">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>GLideN64</h3>
                     <p>N64 grafikplugin</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/GLideN64">GitHub</a> <a href="https://www.danielnylander.se/2025/02/10/oversattning-av-gliden64/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/GLideN64">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>Cemu</h3>
-                    <p>Wii U emulator</p>
+                    <h3>Mupen64Plus</h3>
+                    <p>N64 (libretro)</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/Cemu-Language">GitHub</a></div>
+                    <div class="links"><a href="https://github.com/yeager/mupen64plus-libretro">GitHub</a></div>
                 </div>
+                <div class="card">
+                    <h3>SNES9x</h3>
+                    <p>Super Nintendo</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/snes9x">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>mGBA</h3>
+                    <p>Game Boy Advance</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/mgba">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>NanoBoyAdvance</h3>
+                    <p>Game Boy Advance</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/NanoBoyAdvance">GitHub</a></div>
+                </div>
+                <!-- Microsoft/Sega/Atari -->
                 <div class="card">
                     <h3>xemu</h3>
-                    <p>Original Xbox emulator</p>
+                    <p>Original Xbox</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://github.com/yeager/xemu">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>BigPEmu</h3>
-                    <p>Atari Jaguar emulator</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2024/11/10/oversattning-av-bigpemu/">Blogg</a></div>
-                </div>
-                <div class="card">
                     <h3>Flycast</h3>
-                    <p>Sega Dreamcast emulator</p>
+                    <p>Sega Dreamcast</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://www.danielnylander.se/2025/12/08/oversattning-av-flycast/">Blogg</a></div>
                 </div>
                 <div class="card">
+                    <h3>BigPEmu</h3>
+                    <p>Atari Jaguar</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2024/11/10/oversattning-av-bigpemu/">Blogg</a></div>
+                </div>
+                <!-- Retro computers -->
+                <div class="card">
                     <h3>WinUAE / FS-UAE</h3>
-                    <p>Amiga emulator</p>
+                    <p>Amiga</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://www.danielnylander.se/2025/06/13/oversattning-av-winuae/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>Denise</h3>
-                    <p>Amiga emulator</p>
+                    <p>Amiga</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://www.danielnylander.se/2025/11/17/oversattning-av-denise/">Blogg</a></div>
                 </div>
                 <div class="card">
-                    <h3>ScummVM</h3>
-                    <p>Äventyrs-/spelmotor</p>
+                    <h3>Steem</h3>
+                    <p>Atari ST</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/scummvm">GitHub</a> <a href="https://www.danielnylander.se/2025/03/13/oversattning-av-scummvm/">Blogg</a></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2005/12/20/oversattning-av-steem/">Blogg</a></div>
+                </div>
+                <!-- Multi/Other -->
+                <div class="card">
+                    <h3>RetroArch</h3>
+                    <p>Multi-system frontend</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/04/06/oversattning-av-retroarch/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>ScummVM</h3>
+                    <p>Äventyrsspel-motor</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/scummvm">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>OpenBVE</h3>
                     <p>Tågsimulator</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/OpenBVE">GitHub</a> <a href="https://www.danielnylander.se/2026/01/07/oversattning-av-openbve/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/OpenBVE">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>MAME</h3>
-                    <p>Arkadspel-emulator</p>
+                    <p>Arkadspel</p>
                     <div class="card-meta"><span class="badge badge-contrib">Bidrag</span></div>
                     <div class="links"><a href="https://github.com/yeager/mame">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>NanoBoyAdvance</h3>
-                    <p>Game Boy Advance emulator</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/NanoBoyAdvance">GitHub</a></div>
-                </div>
-                <div class="card">
-                    <h3>Borked3DS / Cherrypick</h3>
-                    <p>3DS emulator forks</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/Borked3DS">GitHub</a></div>
-                </div>
-                <div class="card">
                     <h3>Project OutFox</h3>
-                    <p>Rytmspel-motor (StepMania fork)</p>
+                    <p>Rytmspel (StepMania)</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/OutFox-Translations">GitHub</a> <a href="https://www.danielnylander.se/2025/01/15/oversattning-av-project-outfox/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Ryujinx</h3>
-                    <p>Nintendo Switch emulator</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2024/10/06/oversattning-av-ryujinx/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Steem (Atari ST)</h3>
-                    <p>Atari ST emulator</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2005/12/20/oversattning-av-steem/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/OutFox-Translations">GitHub</a></div>
                 </div>
             </div>
         </section>
 
+        <!-- RETROGAMING -->
         <section id="retrogaming">
             <h2>🕹️ Retrogaming-plattformar</h2>
             <div class="grid">
@@ -359,7 +380,7 @@
                     <h3>Batocera Linux</h3>
                     <p>Retrogaming-distro</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/batocera-emulationstation">GitHub</a> <a href="https://www.danielnylander.se/2025/04/02/oversattning-av-batocera-linux/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/batocera-emulationstation">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>Recalbox</h3>
@@ -374,10 +395,34 @@
                     <div class="links"><a href="https://github.com/yeager/emudeck-electron">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>Pegasus Frontend</h3>
-                    <p>Spel-frontend</p>
+                    <h3>EmuDecky</h3>
+                    <p>EmuDeck Decky-plugin</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/pegasus-frontend">GitHub</a></div>
+                    <div class="links"><a href="https://github.com/yeager/EmuDecky">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>MetaDeck</h3>
+                    <p>IGDB metadata plugin</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/MetaDeck">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Decky Loader</h3>
+                    <p>Steam Deck plugin loader</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/decky-loader">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Decky ROM Library</h3>
+                    <p>ROM-bibliotek för Decky</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/decky-rom-library">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Decky Undervolt</h3>
+                    <p>Steam Deck undervolt</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/Decky-Undervolt">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>EmulationStation</h3>
@@ -386,16 +431,28 @@
                     <div class="links"><a href="https://github.com/yeager/EmulationStation-fcamod">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>RetroAchievements</h3>
-                    <p>Achievements för retro-spel</p>
+                    <h3>Pegasus Frontend</h3>
+                    <p>Spel-frontend</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/07/05/oversattning-av-retroachievements/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/pegasus-frontend">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>Hakchi2 CE</h3>
-                    <p>NES/SNES Classic mod-verktyg</p>
+                    <p>NES/SNES Classic mod</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://github.com/yeager/Hakchi2-CE">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>RetroPie Manager</h3>
+                    <p>Webb-hantering</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/RetroPie-Manager">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>RetroAchievements</h3>
+                    <p>Achievements för retro</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://www.danielnylander.se/2025/07/05/oversattning-av-retroachievements/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>Arcade Manager</h3>
@@ -403,16 +460,247 @@
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://www.danielnylander.se/2025/03/01/oversattning-av-arcade-manager/">Blogg</a></div>
                 </div>
+                <div class="card">
+                    <h3>ES-teman</h3>
+                    <p>Carbon, Art Book Next, Artflix</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/es-theme-carbon">GitHub</a></div>
+                </div>
             </div>
         </section>
 
+        <!-- KODI -->
+        <section id="kodi">
+            <h2>📺 Kodi & Tillägg</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Kodi</h3>
+                    <p>Mediacenter</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/Kodi-Official">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Chorus2</h3>
+                    <p>Kodi webbgränssnitt</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/chorus2">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Kodi iOS Remote</h3>
+                    <p>iPhone-fjärrkontroll</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/Official-Kodi-Remote-iOS">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>TheMovieDB Helper</h3>
+                    <p>Filmmetadata</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/plugin.video.themoviedb.helper">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Google Drive</h3>
+                    <p>Molnlagringstillägg</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/plugin.googledrive">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>OneDrive</h3>
+                    <p>Molnlagringstillägg</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/plugin.onedrive">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Dropbox</h3>
+                    <p>Molnlagringstillägg</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/plugin.dropbox">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Vimeo</h3>
+                    <p>Videotillägg</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/kodi-addon-vimeo">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Ampache</h3>
+                    <p>Musikstreaming</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/ampache-xbmc-plugin">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>AutoSubs</h3>
+                    <p>Automatiska undertexter</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/service.autosubs">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>SubsMangler</h3>
+                    <p>Undertextkonvertering</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/service.subsmangler">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Language Pref Manager</h3>
+                    <p>Språkpreferenser</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/service.LanguagePreferenceManager">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Metadata Editor</h3>
+                    <p>Redigera biblioteksdata</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/script.metadata.editor">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Check Previous Episode</h3>
+                    <p>Spoiler-skydd</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/script.service.checkpreviousepisode">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Playback Resumer</h3>
+                    <p>Återställningspunkter</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/script.service.playbackresumer">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Unpause Jumpback</h3>
+                    <p>Hoppa tillbaka efter paus</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/script.xbmc.unpausejumpback">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Library Auto Update</h3>
+                    <p>Schemalagd uppdatering</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/xbmclibraryautoupdate">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Library Data Provider</h3>
+                    <p>Biblioteksdata för skins</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/service.library.data.provider">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>External Library</h3>
+                    <p>Externt bibliotek</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/kodi.external.library">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Switchback</h3>
+                    <p>Snabbväxling av media</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/plugin.switchback">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Extras Browser</h3>
+                    <p>Extramaterial</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/kodi-addon-extras">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Wellbeing</h3>
+                    <p>Föräldrakontroll</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/kodi-addon-wellbeing">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>MyEpisodes</h3>
+                    <p>Episodspårning</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/script.myepisodes">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Audio Offset Manager</h3>
+                    <p>Ljudsynkronisering</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/script.audiooffsetmanager">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>InputStream Helper</h3>
+                    <p>DRM-stöd</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/script.module.inputstreamhelper">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>InputStream FFmpeg</h3>
+                    <p>Streamstöd</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/inputstream.ffmpegdirect">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>RAW Image Decoder</h3>
+                    <p>RAW-bilder</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/imagedecoder.raw">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>LCDproc</h3>
+                    <p>LCD-display</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/script.xbmc.lcdproc">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Log Viewer</h3>
+                    <p>Loggvisning</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/script.logviewer">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Caber Toss</h3>
+                    <p>Loguppladdning</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/script.cabertoss">GitHub</a></div>
+                </div>
+                <!-- Kodi Skins -->
+                <div class="card">
+                    <h3>Skin: Copacetic</h3>
+                    <p>Kodi-skin + helper</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/skin.copacetic">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Skin: Madnox</h3>
+                    <p>Kodi-skin</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/skin.madnox-master">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Skin: Xperience1080</h3>
+                    <p>Kodi-skin</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/skin.xperience1080">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Skin: Unity</h3>
+                    <p>Kodi-skin</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/skin.unity">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Embuary Info</h3>
+                    <p>Skin-tillägg</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/script.embuary.info">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Skin Variables</h3>
+                    <p>Skin-hjälpare</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/script.skinvariables">GitHub</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GNU -->
         <section id="gnu">
             <h2>🐃 GNU / Translation Project</h2>
-            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Medlem i svenska översättningsteamet sedan 2004. 88% täckning – högst av alla språk!</p>
+            <p class="section-intro">Medlem i svenska översättningsteamet sedan 2004. 88% täckning – högst av alla språk!</p>
             <div class="grid">
                 <div class="card">
                     <h3>GNU coreutils</h3>
-                    <p>Grundläggande UNIX-kommandon</p>
+                    <p>UNIX-kommandon</p>
                     <div class="card-meta"><span class="badge badge-partial">76%</span></div>
                 </div>
                 <div class="card">
@@ -422,65 +710,77 @@
                 </div>
                 <div class="card">
                     <h3>GNU binutils</h3>
-                    <p>Binärverktyg (ld, as, gold)</p>
+                    <p>ld, as, gold</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2026/01/24/uppdatering-av-gnu-gold-gas-och-ld/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>GNU grep, sed, awk</h3>
-                    <p>Textbearbetningsverktyg</p>
+                    <p>Textbearbetning</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                 </div>
                 <div class="card">
                     <h3>GNU gettext</h3>
-                    <p>Internationaliseringsbibliotek</p>
+                    <p>i18n-bibliotek</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                 </div>
                 <div class="card">
-                    <h3>util-linux man-sidor</h3>
-                    <p>Linux-verktygsdokumentation</p>
+                    <h3>GnuPG</h3>
+                    <p>Kryptering</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2026/01/13/oversattning-av-util-linux-man/">Blogg</a></div>
                 </div>
                 <div class="card">
-                    <h3>Vim / Vi</h3>
-                    <p>Textredigerare + tutor</p>
+                    <h3>util-linux man</h3>
+                    <p>Man-sidor</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/vim">GitHub</a> <a href="https://www.danielnylander.se/2025/12/03/uppdaterad-oversattning-av-vim-vi-improved/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>net-tools</h3>
+                    <p>Nätverksverktyg</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/net-tools">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>mutt</h3>
+                    <p>E-postklient</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/mutt">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>dnsmasq</h3>
+                    <p>DNS/DHCP</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
                 </div>
             </div>
         </section>
 
+        <!-- LINUX -->
         <section id="linux">
             <h2>🐧 Linux & Desktop</h2>
             <div class="grid">
                 <div class="card">
                     <h3>Ubuntu</h3>
-                    <p>Första språket att nå 100%!</p>
+                    <p>Första språket till 100%!</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://www.danielnylander.se/2026/01/28/svenska-ubuntu-oversattningar-100/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>Debian Reference</h3>
-                    <p>Debians referensmanual</p>
+                    <p>Referensmanual</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2026/01/02/oversattning-av-debian-reference/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>elementary OS</h3>
                     <p>Linux-distro</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/10/21/oversattning-och-granskning-av-elementary-os/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>MATE Desktop</h3>
                     <p>Skrivbordsmiljö</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/10/07/oversattning-av-skrivbordsmiljon-mate/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>CachyOS</h3>
-                    <p>Arch-baserad distro</p>
+                    <p>Arch-baserad + verktyg</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://github.com/yeager/CachyOS-Welcome">GitHub</a></div>
                 </div>
@@ -490,9 +790,119 @@
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://github.com/yeager/openindiana-welcome">GitHub</a></div>
                 </div>
+                <div class="card">
+                    <h3>Ubuntu One</h3>
+                    <p>Canonical-konto</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>Noctalia Shell</h3>
+                    <p>Wayland desktop shell</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/noctalia-shell">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Unboxing</h3>
+                    <p>Paketinstallation</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/unboxing">GitHub</a></div>
+                </div>
+                <!-- elementary apps -->
+                <div class="card">
+                    <h3>Minder</h3>
+                    <p>Mind-mapping</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/Minder">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Nimbus</h3>
+                    <p>Väderapplet</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/nimbus">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Hourglass</h3>
+                    <p>Timer</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/hourglass">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Badger</h3>
+                    <p>Pausminnare</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/badger">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Jorts</h3>
+                    <p>Sticky notes</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/jorts">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Reminduck</h3>
+                    <p>Påminnelser</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/reminduck">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Obliviate</h3>
+                    <p>Lösenordshanterare</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/obliviate">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Cherry Pick</h3>
+                    <p>Färgväljare</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/cherrypick">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>PDFTricks</h3>
+                    <p>PDF-verktyg</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/pdftricks">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Roll It</h3>
+                    <p>Tärning</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/rollit">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>QRit</h3>
+                    <p>QR-kodgenerator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/QRit">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Inscriptions</h3>
+                    <p>Språkverktyg</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/inscriptions">GitHub</a></div>
+                </div>
+                <!-- Wingpanel indicators -->
+                <div class="card">
+                    <h3>Wingpanel Places</h3>
+                    <p>Diskar/platser</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/wingpanel-indicator-places">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Wingpanel OneThing</h3>
+                    <p>Textindikator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/wingpanel-indicator-onething">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Wingpanel Synapse</h3>
+                    <p>Sökindikator</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/wingpanel-indicator-synapse">GitHub</a></div>
+                </div>
             </div>
         </section>
 
+        <!-- APPS -->
         <section id="apps">
             <h2>📱 Applikationer</h2>
             <div class="grid">
@@ -500,79 +910,24 @@
                     <h3>VLC Media Player</h3>
                     <p>Mediaspelare</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/01/26/uppdaterad-oversattning-av-vlc/">Blogg</a></div>
                 </div>
                 <div class="card">
-                    <h3>Kodi</h3>
-                    <p>Mediacenter</p>
+                    <h3>VirtualBox</h3>
+                    <p>Virtualisering</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/Kodi-Official">GitHub</a> <a href="https://www.danielnylander.se/2025/04/06/uppdaterad-oversattning-av-kodi/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/vbox">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>Inkscape</h3>
-                    <p>Vektorgrafik</p>
+                    <h3>Neovim</h3>
+                    <p>Modern Vim</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/05/12/stor-uppdatering-av-inkscape/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/neovim">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>Blender</h3>
-                    <p>3D-grafik</p>
-                    <div class="card-meta"><span class="badge badge-contrib">Bidrag</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/05/16/bidrar-till-oversattningen-av-blender/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>FreeCAD</h3>
-                    <p>CAD-program</p>
+                    <h3>Vim</h3>
+                    <p>Textredigerare + tutor</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/FreeCAD">GitHub</a> <a href="https://www.danielnylander.se/2025/09/06/uppdatering-av-freecad/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>LibreCAD</h3>
-                    <p>2D CAD</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/06/14/oversattning-av-librecad-2/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>OpenSCAD</h3>
-                    <p>Programmerbar CAD</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/openscad">GitHub</a> <a href="https://www.danielnylander.se/2025/06/16/oversattning-av-openscad/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Scribus</h3>
-                    <p>Desktop publishing</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/07/27/uppdatering-for-scribus/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Ardour</h3>
-                    <p>Digital Audio Workstation</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/ardour">GitHub</a> <a href="https://www.danielnylander.se/2026/01/16/oversattning-av-ardour/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Shotcut</h3>
-                    <p>Videoredigerare</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/shotcut">GitHub</a> <a href="https://www.danielnylander.se/2025/07/06/oversattning-av-shotcut/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>MKVToolNix</h3>
-                    <p>MKV-verktyg</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/09/03/oversattning-av-mkvtoolnix/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Remmina</h3>
-                    <p>Fjärrskrivbordsklient</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/12/31/oversattning-av-remmina/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Bitwarden</h3>
-                    <p>Lösenordshanterare</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/07/09/oversattning-av-bitwarden/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/vim">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>qBittorrent</h3>
@@ -581,46 +936,14 @@
                     <div class="links"><a href="https://github.com/yeager/qBittorrent">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>Stellarium</h3>
-                    <p>Planetarium</p>
+                    <h3>Remmina</h3>
+                    <p>Fjärrskrivbord</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/02/01/uppdatering-av-stellarium/">Blogg</a></div>
                 </div>
                 <div class="card">
-                    <h3>Home Assistant</h3>
-                    <p>Smart hem-plattform</p>
+                    <h3>Bitwarden</h3>
+                    <p>Lösenordshanterare</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/12/07/oversattning-av-home-assistant/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Aseprite</h3>
-                    <p>Pixelkonstverktyg</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/10/25/oversattning-av-aseprite/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>FontForge</h3>
-                    <p>Typsnittsredigerare</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/10/23/oversattning-av-fontforge/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>HandBrake</h3>
-                    <p>Videokonverterare</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2024/11/04/oversattning-av-handbrake-windows/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Wireshark</h3>
-                    <p>Nätverksanalys</p>
-                    <div class="card-meta"><span class="badge badge-contrib">Bidrag</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/04/11/litet-bidrag-till-wireshark/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Neovim</h3>
-                    <p>Modern Vim-fork</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/neovim">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>KVIrc</h3>
@@ -630,182 +953,314 @@
                 </div>
                 <div class="card">
                     <h3>ShareX</h3>
-                    <p>Skärmdump-verktyg</p>
+                    <p>Skärmdump</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://github.com/yeager/ShareX">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>BetterDisplay</h3>
-                    <p>macOS-skärmhantering</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/BetterDisplay-localization">GitHub</a></div>
-                </div>
-                <div class="card">
                     <h3>Solaar</h3>
-                    <p>Logitech-enhetshantering</p>
+                    <p>Logitech-enheter</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://github.com/yeager/Solaar">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>Minder</h3>
-                    <p>Mind-mapping</p>
+                    <h3>BetterDisplay</h3>
+                    <p>macOS skärmhantering</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/Minder">GitHub</a></div>
+                    <div class="links"><a href="https://github.com/yeager/BetterDisplay-localization">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Stellarium</h3>
+                    <p>Planetarium</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>Home Assistant</h3>
+                    <p>Smart hem</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
                 </div>
                 <div class="card">
                     <h3>FileBrowser</h3>
-                    <p>Webb-baserad filhanterare</p>
+                    <p>Webb-filhanterare</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://github.com/yeager/filebrowser">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Digger</h3>
+                    <p>DNS-lookup</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/digger">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Inno Setup</h3>
+                    <p>Windows-installationsprogram</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/issrc">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>HardInfo2</h3>
+                    <p>Systeminformation</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/hardinfo2">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Pigeon Planner</h3>
+                    <p>Duvhantering</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>Tiny Media Manager</h3>
+                    <p>Mediahanterare</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>Keka</h3>
+                    <p>macOS-arkiverare</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>Eden</h3>
+                    <p>Humanitärt system</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>Fcitx5-Qt</h3>
+                    <p>Inmatningsmetod</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/fcitx5-qt">GitHub</a></div>
                 </div>
             </div>
         </section>
 
+        <!-- GRAFIK -->
+        <section id="grafik">
+            <h2>🎨 Grafik & Design</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Inkscape</h3>
+                    <p>Vektorgrafik</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>Blender</h3>
+                    <p>3D-grafik</p>
+                    <div class="card-meta"><span class="badge badge-contrib">Bidrag</span></div>
+                </div>
+                <div class="card">
+                    <h3>FreeCAD</h3>
+                    <p>CAD-program</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/FreeCAD">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>LibreCAD</h3>
+                    <p>2D CAD</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>OpenSCAD</h3>
+                    <p>Programmerbar CAD</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/openscad">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Scribus</h3>
+                    <p>Desktop publishing</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>GIMP</h3>
+                    <p>Bildredigering</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>Aseprite</h3>
+                    <p>Pixelkonst</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>FontForge</h3>
+                    <p>Typsnittsredigering</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LJUD/VIDEO -->
+        <section id="ljud">
+            <h2>🎵 Ljud & Video</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Ardour</h3>
+                    <p>Digital Audio Workstation</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/ardour">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Shotcut</h3>
+                    <p>Videoredigerare</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/shotcut">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>MKVToolNix</h3>
+                    <p>MKV-verktyg</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>HandBrake</h3>
+                    <p>Videokonverterare</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>Denemo</h3>
+                    <p>Notskrift</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>ZVBI</h3>
+                    <p>Text-TV</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/zvbi">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Ampache</h3>
+                    <p>Musikstreaming</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>OpenATV</h3>
+                    <p>Enigma2 (digitalbox)</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPEL -->
         <section id="spel">
             <h2>🎯 Spel</h2>
             <div class="grid">
                 <div class="card">
                     <h3>OpenXcom</h3>
-                    <p>X-COM: UFO Defense remake</p>
+                    <p>X-COM remake</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/11/03/oversattning-av-openxcom/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>0 A.D.</h3>
-                    <p>Historiskt strategispel</p>
+                    <p>Strategispel</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/12/30/uppdatering-av-0-a-d/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>Widelands</h3>
                     <p>Settlers-liknande</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/12/27/uppdatering-av-widelands/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>SuperTux</h3>
                     <p>Plattformsspel</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/04/26/liten-uppdatering-av-spelet-supertux/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>Tux Paint</h3>
                     <p>Ritprogram för barn</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/04/19/uppdaterad-oversattning-av-rita-med-tux-tux-paint/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Tux Math</h3>
+                    <p>Matematik för barn</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>GCompris</h3>
+                    <p>Barnspel</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
                 </div>
                 <div class="card">
                     <h3>Shattered Pixel Dungeon</h3>
                     <p>Roguelike</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/07/16/oversattning-av-shattered-pixel-dungeon/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Neverball</h3>
+                    <p>3D-bollspel</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
                 </div>
             </div>
         </section>
 
-        <section id="verktyg">
-            <h2>🔧 Mina verktyg</h2>
-            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Verktyg jag byggt för att underlätta översättningsarbetet.</p>
-            <div class="grid">
-                <div class="card">
-                    <h3>l10n-lint</h3>
-                    <p>Linter för översättningsfiler (.po, .ts)</p>
-                    <div class="card-meta"><span class="badge badge-100">45 språk</span></div>
-                    <div class="links"><a href="https://github.com/yeager/l10n-lint">GitHub</a> <a href="https://www.danielnylander.se/2026/02/03/l10n-lint-ny-linter-for-oversattningsfiler/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>tp-lint</h3>
-                    <p>Granska Translation Project-översättningar</p>
-                    <div class="card-meta"><span class="badge badge-100">37 språk</span></div>
-                    <div class="links"><a href="https://github.com/yeager/tp-lint">GitHub</a> <a href="https://www.danielnylander.se/2026/02/03/tp-lint-granska-translation-project-oversattningar-automatiskt/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>po-translate</h3>
-                    <p>Batch-översätt med AI eller gratis tjänster</p>
-                    <div class="card-meta"><span class="badge badge-100">37 språk</span></div>
-                    <div class="links"><a href="https://github.com/yeager/po-translate">GitHub</a> <a href="https://www.danielnylander.se/2026/02/03/po-translate-batch-oversatt-po-filer-med-ai-eller-gratis-tjanster/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Kodi Subtitle Translator</h3>
-                    <p>Översätt undertexter i Kodi automatiskt</p>
-                    <div class="card-meta"><span class="badge badge-100">25 språk</span></div>
-                    <div class="links"><a href="https://github.com/yeager/kodi-subtitle-translator">GitHub</a> <a href="https://www.danielnylander.se/2026/01/31/automatisk-oversattning-av-undertexter-i-kodi/">Blogg</a></div>
-                </div>
-            </div>
-        </section>
-
+        <!-- GIS -->
         <section id="geo">
             <h2>🗺️ GIS & Geografi</h2>
             <div class="grid">
                 <div class="card">
                     <h3>QGIS</h3>
-                    <p>Geografiskt informationssystem</p>
+                    <p>GIS + dokumentation</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/07/30/oversattning-av-qgis/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/QGIS-Documentation">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>GRASS GIS</h3>
                     <p>GIS-analys</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/06/02/oversattning-av-grass-gis/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>SAGA GIS</h3>
-                    <p>Geomorfologisk analys</p>
+                    <p>Geomorfologi</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/06/10/oversattning-av-saga-gis/">Blogg</a></div>
                 </div>
                 <div class="card">
-                    <h3>PostGIS</h3>
-                    <p>Geografisk databas + manual</p>
+                    <h3>PostGIS + manual</h3>
+                    <p>Geografisk databas</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/06/08/oversattning-av-manualen-for-postgis/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>pgAdmin 4</h3>
-                    <p>PostgreSQL-administration</p>
+                    <p>PostgreSQL-admin</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://github.com/yeager/pgadmin4">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>pgRouting Workshop</h3>
-                    <p>Routing i PostgreSQL</p>
+                    <p>Routing</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/07/07/oversattning-av-pgrouting-workshop/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>OSGeoLive</h3>
-                    <p>Live-distro för GIS</p>
+                    <p>GIS Live-distro</p>
                     <div class="card-meta"><span class="badge badge-contrib">Bidrag</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/06/02/bidragit-till-osgeolive/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/OSGeoLive-doc">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>DigiAgriApp</h3>
+                    <p>Jordbruksapp</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
                 </div>
             </div>
         </section>
 
+        <!-- SERVER -->
         <section id="server">
             <h2>🖥️ Server & DevOps</h2>
             <div class="grid">
                 <div class="card">
                     <h3>Proxmox VE</h3>
-                    <p>Virtualiseringsplattform</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/07/05/oversattning-av-proxmox/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Proxmox Datacenter Manager</h3>
-                    <p>Datacenter-hantering</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/09/11/oversattning-av-proxmox-datacenter-manager/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>VirtualBox</h3>
                     <p>Virtualisering</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/vbox">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Proxmox Datacenter Mgr</h3>
+                    <p>Datacenter</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>ProxMenux</h3>
+                    <p>Proxmox-meny</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/ProxMenux">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>Incus</h3>
-                    <p>Container/VM-hanterare (LXD-fork)</p>
+                    <p>Container/VM (LXD-fork)</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://github.com/yeager/incus">GitHub</a></div>
                 </div>
@@ -813,7 +1268,6 @@
                     <h3>Zabbix</h3>
                     <p>Övervakning</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/08/26/oversattning-av-zabbix-2/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>Cacti</h3>
@@ -828,64 +1282,117 @@
                     <div class="links"><a href="https://github.com/yeager/zoneminder">GitHub</a></div>
                 </div>
                 <div class="card">
+                    <h3>Greenbone GSA</h3>
+                    <p>Säkerhetsskanning</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/gsa">GitHub</a></div>
+                </div>
+                <div class="card">
                     <h3>Squid</h3>
                     <p>Cache-proxy</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
                     <div class="links"><a href="https://github.com/yeager/squid">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>Weblate</h3>
-                    <p>Översättningsplattform</p>
+                    <h3>OctoPrint</h3>
+                    <p>3D-skrivarstyrning</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2026/01/05/uppdatering-av-weblate/">Blogg</a></div>
                 </div>
                 <div class="card">
-                    <h3>Transifex</h3>
-                    <p>Översättningsplattform</p>
+                    <h3>NextExplorer</h3>
+                    <p>Webbfilshanterare</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/07/29/oversattning-av-transifex/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/nextExplorer">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>OpenCloud</h3>
+                    <p>Molnlagring</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
                 </div>
                 <div class="card">
                     <h3>Veyon</h3>
                     <p>Klassrumshantering</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/02/17/oversattning-av-veyon/">Blogg</a></div>
                 </div>
                 <div class="card">
-                    <h3>OctoPrint</h3>
-                    <p>3D-skrivarstyrning</p>
+                    <h3>CUPS</h3>
+                    <p>Utskriftssystem</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2021/10/05/oversattning-av-octoprint/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/cups">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>libsmbios</h3>
+                    <p>Dell SMBIOS</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/libsmbios">GitHub</a></div>
                 </div>
             </div>
         </section>
 
+        <!-- DOCS -->
         <section id="docs">
-            <h2>📚 Dokumentation & Ramverk</h2>
+            <h2>📚 Dokumentation & Plattformar</h2>
             <div class="grid">
                 <div class="card">
                     <h3>Python-dokumentationen</h3>
-                    <p>Officiell Python-dokumentation</p>
+                    <p>Officiell Python-docs</p>
                     <div class="card-meta"><span class="badge badge-contrib">Bidrag</span></div>
-                    <div class="links"><a href="https://github.com/yeager/cpython">GitHub</a> <a href="https://www.danielnylander.se/2025/08/13/oversattning-av-python-dokumentationen/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/cpython">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Python docs theme</h3>
+                    <p>Sphinx-tema</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/python-docs-theme">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Python Developer Guide</h3>
+                    <p>Utvecklarguide</p>
+                    <div class="card-meta"><span class="badge badge-contrib">Bidrag</span></div>
+                    <div class="links"><a href="https://github.com/yeager/devguide">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>Django-dokumentation</h3>
-                    <p>Python webramverk</p>
+                    <p>Webramverk</p>
                     <div class="card-meta"><span class="badge badge-contrib">Bidrag</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/08/02/oversattning-av-django-dokumentation/">Blogg</a></div>
-                </div>
-                <div class="card">
-                    <h3>Read the Docs</h3>
-                    <p>Dokumentationshosting</p>
-                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/08/11/oversattning-av-read-the-docs/">Blogg</a></div>
                 </div>
                 <div class="card">
                     <h3>Sphinx</h3>
                     <p>Dokumentationsverktyg</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/08/14/oversattning-av-sphinx-och-sphinx-dokumentationen/">Blogg</a></div>
+                </div>
+                <div class="card">
+                    <h3>Sphinx RTD Theme</h3>
+                    <p>ReadTheDocs-tema</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/sphinx_rtd_theme">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Read the Docs</h3>
+                    <p>Dokumentationshosting</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>Weblate</h3>
+                    <p>Översättningsplattform</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>Pontoon</h3>
+                    <p>Mozilla-översättning</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/pontoon">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Transifex</h3>
+                    <p>Översättningsplattform</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                </div>
+                <div class="card">
+                    <h3>MoinMoin Wiki</h3>
+                    <p>Wiki-motor</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/moin">GitHub</a></div>
                 </div>
                 <div class="card">
                     <h3>Qt 5 & Qt 6</h3>
@@ -895,48 +1402,91 @@
                 </div>
                 <div class="card">
                     <h3>Qt Creator</h3>
-                    <p>IDE för Qt</p>
+                    <p>IDE</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2024/12/23/oversattning-av-qt-creator-15/">Blogg</a></div>
                 </div>
                 <div class="card">
-                    <h3>CUPS</h3>
-                    <p>Utskriftssystem</p>
+                    <h3>Qt Installer Framework</h3>
+                    <p>Installationsprogram</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://github.com/yeager/cups">GitHub</a></div>
+                    <div class="links"><a href="https://github.com/yeager/installer-framework">GitHub</a></div>
                 </div>
                 <div class="card">
-                    <h3>GnuPG</h3>
-                    <p>Kryptering</p>
+                    <h3>Qt Keychain</h3>
+                    <p>Lösenordslagring</p>
                     <div class="card-meta"><span class="badge badge-100">100%</span></div>
-                    <div class="links"><a href="https://www.danielnylander.se/2025/11/16/uppdatering-av-gnupg/">Blogg</a></div>
+                    <div class="links"><a href="https://github.com/yeager/qtkeychain">GitHub</a></div>
                 </div>
             </div>
         </section>
 
+        <!-- VERKTYG -->
+        <section id="verktyg">
+            <h2>🔧 Mina verktyg</h2>
+            <p class="section-intro">Verktyg jag byggt för att underlätta översättningsarbetet.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>l10n-lint</h3>
+                    <p>Linter för .po/.ts</p>
+                    <div class="card-meta"><span class="badge badge-100">45 språk</span></div>
+                    <div class="links"><a href="https://github.com/yeager/l10n-lint">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>tp-lint</h3>
+                    <p>Translation Project-linter</p>
+                    <div class="card-meta"><span class="badge badge-100">37 språk</span></div>
+                    <div class="links"><a href="https://github.com/yeager/tp-lint">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>po-translate</h3>
+                    <p>Batch-översättning</p>
+                    <div class="card-meta"><span class="badge badge-100">37 språk</span></div>
+                    <div class="links"><a href="https://github.com/yeager/po-translate">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>Kodi Subtitle Translator</h3>
+                    <p>Automatisk undertextöversättning</p>
+                    <div class="card-meta"><span class="badge badge-100">25 språk</span></div>
+                    <div class="links"><a href="https://github.com/yeager/kodi-subtitle-translator">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>OutFox Translation Helper</h3>
+                    <p>Saknade nycklar</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/OutFox-Translation-Helper">GitHub</a></div>
+                </div>
+                <div class="card">
+                    <h3>translations</h3>
+                    <p>Diverse översättningar</p>
+                    <div class="card-meta"><span class="badge badge-100">100%</span></div>
+                    <div class="links"><a href="https://github.com/yeager/translations">GitHub</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HISTORIK -->
         <section id="historic">
             <h2>📜 Historiska milstolpar</h2>
-            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Några höjdpunkter från 20+ år som översättare.</p>
             <div class="grid">
                 <div class="card">
                     <h3>2004</h3>
-                    <p>Gick med i svenska översättningsteamet på Translation Project</p>
+                    <p>Gick med i Translation Project</p>
                 </div>
                 <div class="card">
                     <h3>2005</h3>
-                    <p>Började översätta Debian, VLC, Ubuntu, Dreambox</p>
+                    <p>Debian, VLC, Ubuntu, Dreambox, Asterisk</p>
                 </div>
                 <div class="card">
                     <h3>2006</h3>
-                    <p>GNOME, Stellarium, Brasero, Zabbix</p>
+                    <p>GNOME, Stellarium, Brasero, Zabbix, Enigma</p>
                 </div>
                 <div class="card">
                     <h3>2007</h3>
-                    <p>VirtualBox, GIMP, Wine, FilZilla, Monodevelop</p>
+                    <p>VirtualBox, GIMP, Wine, FilZilla, Second Life</p>
                 </div>
                 <div class="card">
                     <h3>2008–2010</h3>
-                    <p>Qt 4, Xfce, Ampache, Ubuntu Nordic Remix</p>
+                    <p>Qt 4, Xfce, LXDE, Ampache, Ubuntu Nordic Remix</p>
                 </div>
                 <div class="card">
                     <h3>2011</h3>
@@ -944,12 +1494,11 @@
                 </div>
                 <div class="card">
                     <h3>2024–2025</h3>
-                    <p>Emulatorer: RPCS3, PCSX2, DuckStation, Vita3K, shadPS4, RetroArch...</p>
+                    <p>Emulatorer! RPCS3, PCSX2, Vita3K, RetroArch...</p>
                 </div>
                 <div class="card">
                     <h3>2026</h3>
-                    <p>Ubuntu 100% på svenska – första språket! 🎉</p>
-                    <div class="links"><a href="https://www.danielnylander.se/2026/01/28/svenska-ubuntu-oversattningar-100/">Blogg</a></div>
+                    <p>Ubuntu 100% – första språket! 🎉</p>
                 </div>
             </div>
         </section>
